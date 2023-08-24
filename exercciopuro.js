@@ -1,48 +1,34 @@
-
-
-/*class Pessoa {
-    nome;
-    idade;
-    altura;
-    anoDeNacimento;
-
-
-    descrever() {
-        console.log(`meu nome é: ${this.nome} minha idade e : ${this.idade} `);
-    }
-
-}
-
-const willame =new Pessoa ();
-willame.nome = 'willame';
-willame.idade =25;
-willame.descrever();*/
-
 class Pessoa {
     nome;
+    altura;
     idade;
+    peso;
 
-    constructor(nome, idade) {
+
+
+    constructor(nome, altura, idade, peso) {
         this.nome = nome;
+        this.altura = altura;
         this.idade = idade;
-
+        this.peso = peso;
     }
 
-    vericiaridade() {
-        const veriidade = this.idade;
-        if (veriidade > 20) {
-            return 'ela é maior de iadade';
-
+    verificarpeso() {
+        const veripeso = this.peso;
+        if (veripeso <= 20) {
+            console.log('vc tem um peso muito leve ');
         } else {
-
-            return 'ela não é maior de idade';
+            console.log('vc tem um peso acima de 20 kilo');
         }
-
 
     }
 
 }
-const willame = new Pessoa('willame', 19);
-console.log(willame);
 
-console.log(willame.vericiaridade());
+
+
+
+const p1 = new Pessoa('wllame', 1.69, 26, 21);
+
+p1.verificarpeso();
+
