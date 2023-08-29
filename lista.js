@@ -8,8 +8,14 @@ nota.push(6);
 
 
 
+console.log(nota);
 
-let soma = 0;
+
+const numero1 = [10,20,30,40];
+console.log(numero1);
+
+
+/*let soma = 0;
 
 for (let i = 0; i < nota.length; i++) {
     const n1 = nota[i];
@@ -21,4 +27,4 @@ const media = soma / nota.length;
 
 console.log(soma);
 
-console.log (media.toFixed(2));
+console.log (media.toFixed(2));*/
