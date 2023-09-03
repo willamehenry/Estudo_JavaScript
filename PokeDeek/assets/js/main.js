@@ -1,6 +1,13 @@
-console.log('Sucesso');
+const offset = 0;
+const limit = 10;
 
-function animacao() {
 
-alert('teste de veificação ok ');
-}
+const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+
+fetch (url).then (function(responde){
+console.log(responde);
+
+})
+
+const x =10 +10;
+console.log (x);
