@@ -10,4 +10,8 @@ console.log(responde);
 })
 
 const x =10 +10;
-console.log (x);
+const y =20 + 20;
+const soma = (x*y);
+
+
+console.log (soma);
