@@ -11,7 +11,7 @@ console.log(responde);
 
 const x =10 +10;
 const y =20 + 20;
-const soma = (x*y);
+const soma = (x*y)/2;
 
 
 console.log (soma);
