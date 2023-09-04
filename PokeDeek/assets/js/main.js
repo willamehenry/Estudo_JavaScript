@@ -1,17 +1,38 @@
-const offset = 0;
-const limit = 10;
+function convertpokemonTypesli (pokemonTypes){
+return pokemonTypes.map((typeSlot)=> `<li class="type">${typeSlot.type.name}</li>`);
+
+}
+
+function convertPokemonLi(pokemon) {
+    return `<li class="pokemon">
+<span class="number">#${pokemon.order}</span>
+<span class="nome">${pokemon.name}</span>
+
+<div class="detail">
+    <ol class="types">
+        ${convertpokemonTypesli(pokemon.types).join('')}
+    </ol>
+    <img src="${pokemon.sprites.other.dream_world.front_default}" 
+    alt="${pokemon.name}">
+
+</div>
+</li>`
 
 
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
+}
 
-fetch (url).then (function(responde){
-console.log(responde);
+const pokemonList = document.getElementById('pokemonList');
+
+
+
+pokeApi.getPokemons().then((pokemonst = []) => {
+    const newhtml =  pokemonst.map(convertPokemonLi).join('');
+  
+    pokemonList.innerHTML = newhtml;
+    
 
 })
-
-const x =10 +10;
-const y =20 + 20;
-const soma = (x*y)/2;
+        
 
 
-console.log (soma);
+
